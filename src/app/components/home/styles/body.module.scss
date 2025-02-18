@@ -1,0 +1,145 @@
+
+$text-margin: 20px;
+$std-margin: 40px;
+$std-radius: 20px;
+
+.jumbotron {
+    width: 100%;
+    height: auto;
+    position: relative;
+    // z-index: 95;
+}
+
+.jumbotron_image {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.jumbotron_text {
+    position: absolute;
+    left: var(--default_padding);
+    top: 40%;
+    
+    color: var(--color_white);
+    text-align: left;
+
+    > h1 {
+        margin: 0;
+        padding: 0;
+        font: {
+            size: 7rem;
+            weight: 500;
+        }
+    }
+
+    > p {
+        width: 70%;
+        margin: $text-margin 0;
+        padding: 0;
+        font: {
+            size: 1.5rem;
+            weight: 500;
+        }
+    }
+
+    button {
+        width: 200px;
+        height: 60px;
+        color: var(--color_dark);
+        background-color: var(--color_white);
+        border: 2px solid var(--color_dark);
+        cursor: pointer;
+        font: {
+            size: 1rem;
+            weight: 600;
+        }
+        border-radius: 30px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+// CANVAS
+$margin_separation: 50px;
+.canvas {
+    width: calc(100% - (100px * 2));
+    height: 500px;
+    margin: $margin_separation auto;
+    background-color: var(--color_frame);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    > div.canvas_image_cover {
+        width: calc(60% - $margin_separation);
+        height: 100%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    > div.canvas_text_cover {
+        width: 40%;
+        margin-left: $margin_separation;
+        text-align: left;
+    }
+}
+.canvas_text_cover {
+
+    div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+
+        > h1,
+        > p {
+            margin: var(--text_margin) 0;
+        }
+
+        > h1 {
+            font: {
+                size: 3rem;
+                weight: 500;
+            }
+        }
+        > p {
+            font: {
+                size: 1.5rem;
+                weight: 500;
+            }
+            color: var(--color_light);
+        }
+
+        button {
+            width: 200px;
+            height: 60px;
+            color: var(--color_dark);
+            background-color: var(--color_white);
+            border: 2px solid var(--color_dark);
+            cursor: pointer;
+            font: {
+                size: 1rem;
+                weight: 600;
+            }
+            border-radius: 30px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    div.order_right {
+        align-items: right;
+    }
+}
