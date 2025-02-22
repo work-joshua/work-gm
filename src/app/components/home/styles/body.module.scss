@@ -1,5 +1,6 @@
 
 $text-margin: 20px;
+$text-margin-mobile: 10px;
 $std-margin: 40px;
 $std-radius: 20px;
 
@@ -66,6 +67,7 @@ $std-radius: 20px;
 
 // CANVAS
 $margin_separation: 50px;
+$margin_separation_mobile: 20px;
 .canvas {
     width: calc(100% - (100px * 2));
     height: 500px;
@@ -120,8 +122,9 @@ $margin_separation: 50px;
         }
 
         button {
-            width: 200px;
+            width: auto;
             height: 60px;
+            padding: 0 $text-margin;
             color: var(--color_dark);
             background-color: var(--color_white);
             border: 2px solid var(--color_dark);
@@ -142,4 +145,107 @@ $margin_separation: 50px;
     div.order_right {
         align-items: right;
     }
+}
+
+
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+
+    .jumbotron_image {
+        height: 90vh;
+    }
+
+    .jumbotron_text {
+        position: absolute;
+        left: var(--default_padding_mobile);
+        top: 40%;
+    
+        > h1 {
+            font: {
+                size: 4rem;
+            }
+        }
+    
+        > p {
+            width: 90%;
+            margin: $text-margin-mobile 0;
+            font: {
+                size: 1.2rem;
+            }
+        }
+    
+        button {
+            width: 150px;
+            height: 40px;
+        }
+    }
+
+    .canvas {
+        width: 100%;
+        height: auto;
+        margin: $margin_separation_mobile auto;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        > div.canvas_image_cover {
+            width: 100%;
+            height: 300px;
+            padding: $margin_separation_mobile 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+                width: auto;
+                height: 90%;
+            }
+        }
+        > div.canvas_text_cover {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .canvas_text_cover {
+        padding: $text-margin 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            > h1,
+            > p {
+                margin: var(--text_margin) 0;
+                text-align: center;
+            }
+    
+            > h1 {
+                font: {
+                    size: 2rem;
+                }
+            }
+            > p {
+                width: 80%;
+                font: {
+                    size: 1.2rem;
+                }
+            }
+    
+            button {
+                width: auto;
+                padding: 0 $text-margin-mobile;
+                height: 40px;
+            }
+        }
+    }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 900px) {
+
+
 }

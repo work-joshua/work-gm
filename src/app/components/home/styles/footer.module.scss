@@ -1,0 +1,120 @@
+
+$std-padding: 40px; 
+
+.footer {
+    width: 100%;
+    height: 400px;
+    padding: $std-padding 0;
+    background-color: var(--color_frame);
+
+    > p {
+        text-align: center;
+    }
+}
+
+.footer_list_cover {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+}
+
+.footer_lists_item {
+    min-width: 250px;
+
+    > p {
+        margin: 15px 0;
+        font: {
+            size: 2rem;
+            weight: 500;
+        }
+    }
+
+    > section {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        display: none;
+
+        button {
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+    > ul {
+        li {
+            margin: 10px 0;
+            font: {
+                size: 1.3rem;
+                weight: 500;
+            }
+        }
+        a {
+            color: var(--color_light);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.footer_socials {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    > a {
+        margin: 0 calc($std-padding / 2);
+    }
+
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+
+    .footer {
+        height: auto;
+    }
+
+    .footer_list_cover {
+        width: calc(100% - 20px);
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: left;
+    }
+    .footer_lists_item {
+        min-width: 200px;
+    
+        > p {
+            margin: 10px 0;
+            font: {
+                size: 1.5rem;
+            }
+        }
+    
+        > ul {
+            li {
+                font: {
+                    size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 900px) {
+
+
+}

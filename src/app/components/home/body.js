@@ -55,22 +55,22 @@ function Canvas() {
             </div>
 
             <div className={styles.canvas}>
+                <div className={styles.canvas_image_cover}>
+                    <Image 
+                        src={'/stock/caleb.jpg'}
+                        alt={'studio shoot'}
+                        width={300}
+                        height={400}
+                    />
+                </div>
                 <div className={styles.canvas_text_cover}>
-                    <div className={styles.order_right}>
+                    <div className={styles.order_rightt}>
                         <h1>Studio Shoot</h1>
                         <p>Leverage on our best-in-class materials for unrealistic photos.</p>
                         <a href="#">
                             <button><span>Book a session</span><span>{ icons.chevron_right }</span></button>
                         </a>
                     </div>
-                </div>
-                <div className={styles.canvas_image_cover}>
-                    <Image 
-                        src={'/stock/caleb.jpg'}
-                        alt={'frames'}
-                        width={300}
-                        height={400}
-                    />
                 </div>
             </div>
 
@@ -79,8 +79,6 @@ function Canvas() {
                     <Image 
                         src={'/stock/jeo.jpg'}
                         alt={'weddings'}
-                        // width={500}
-                        // height={400}
                         fill={true}
                         priority={true}
                         loading='eager'
@@ -103,7 +101,7 @@ function Canvas() {
     )
 }
 
-export function Body() {
+export default function Body() {
 
     return (
         <>
