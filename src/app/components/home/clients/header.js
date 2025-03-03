@@ -2,23 +2,35 @@
 'use client'
 
 import Image from 'next/image';
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from 'react';
-import styles from './styles/header.module.scss';
+import styles from './header.module.scss';
 import { icons } from '@/app/assets/icons';
 
-export const Menu = () => {
+
+function FindCurrentPage() {
+
+    const pathname = usePathname().replace(/^\/+/, ""); // Get the pathname
+
+    switch (true) {
+        case pathname.startsWith('works'):
+            return 'works'
+        case pathname.startsWith('about'):
+            return 'about'
+        case pathname.startsWith('booking'):
+            return 'booking'
+        default:
+            return 'home'
+    }
+}
+
+export const Menu = ({  }) => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const thisPage = FindCurrentPage()
 
     useEffect(() => {
-        // if(isOpen) {
             document.body.style.overflow = 'hidden'; // Disable scrolling
-        // } else {
-        //     document.body.style.overflow = '';
-        // }
-        
-    
-        // Cleanup function to reset scrolling when the component unmounts
         return () => {
             document.body.style.overflow = '';
         };
@@ -32,7 +44,7 @@ export const Menu = () => {
         <>
             <div className={styles.header}>
                 <div className={styles.header_one}>
-                    <a href="#" title="GM Concept and Creativity">
+                    <a href="/" title="GM Concept and Creativity">
                         <Image
                             src={'/icons/gm.png'}
                             alt={'GM Logo'}
@@ -42,17 +54,14 @@ export const Menu = () => {
                     </a>
                 </div>
                 <div className={styles.header_two}>
-                    <a href="#" title="Projects we have worked on">
-                        <button>Works</button>
-                    </a>
-                    <a href="#" title="See product pricing">
-                        <button>Pricing</button>
+                    <a href="/works" title="Projects we have worked on">
+                        <button className={`${thisPage=='works' ? styles.menu_active : ''}`}>Works</button>
                     </a>
                     <a href="#" title="About GM">
-                        <button>About</button>
+                        <button className={`${thisPage=='about' ? styles.menu_active : ''}`}>About</button>
                     </a>
                     <a href="#" title="Schedule a session">
-                        <button>Booking</button>
+                        <button className={`${thisPage=='booking' ? styles.menu_active : ''}`}>Booking</button>
                     </a>
                 </div>
                 <div className={styles.header_three}>
@@ -73,17 +82,14 @@ export const Menu = () => {
                         }
                     </button>
                     <div className={`${styles.header_menu_list_mobile} ${isOpen ? styles.visible : ''}`}>
-                        <a href="#">
-                            <p>Works</p>
+                        <a href="/works">
+                            <p className={`${thisPage=='works' ? styles.menu_mobile_active : ''}`}>Works</p>
                         </a>
                         <a href="#">
-                            <p>Pricing</p>
+                            <p className={`${thisPage=='about' ? styles.menu_mobile_active : ''}`}>About</p>
                         </a>
                         <a href="#">
-                            <p>About</p>
-                        </a>
-                        <a href="#">
-                            <p>Booking</p>
+                            <p className={`${thisPage=='booking' ? styles.menu_mobile_active : ''}`}>Booking</p>
                         </a>
                     </div>
                 </div>

@@ -67,9 +67,9 @@ $std-radius: 20px;
 
 // CANVAS
 $margin_separation: 50px;
-$margin_separation_mobile: 20px;
+$margin_separation_mobile: 10px;
 .canvas {
-    width: calc(100% - (100px * 2));
+    width: calc(100% - ($margin_separation * 2));
     height: 500px;
     margin: $margin_separation auto;
     background-color: var(--color_frame);

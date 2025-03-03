@@ -64,7 +64,7 @@ export function Footer() {
                         </section>
                         <ul>
                             <li>
-                                <a>112, Lorem Ipsum Street, Lagos</a>
+                                112, Lorem Ipsum Street, Lagos
                             </li>
                             <li>
                                 <a href="tell:08036464149">08036464149</a>

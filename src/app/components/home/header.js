@@ -2,11 +2,11 @@
 import { Menu } from './clients/header';
 
 
-export function Header() {
+export function Header({ page=null }) {
 
     return (
         <>
-            <Menu />
+            <Menu page={page} />
         </>
     );
 }

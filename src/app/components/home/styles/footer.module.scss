@@ -20,12 +20,13 @@ $std-padding: 40px;
 }
 
 .footer_lists_item {
-    min-width: 250px;
+    min-width: 220px;
 
     > p {
         margin: 15px 0;
+        color: var(--color_light);
         font: {
-            size: 2rem;
+            size: 1rem;
             weight: 500;
         }
     }
@@ -52,7 +53,7 @@ $std-padding: 40px;
             }
         }
         a {
-            color: var(--color_light);
+            color: var(--color_dark);
             &:hover {
                 text-decoration: underline;
             }
@@ -97,15 +98,12 @@ $std-padding: 40px;
     
         > p {
             margin: 10px 0;
-            font: {
-                size: 1.5rem;
-            }
         }
     
         > ul {
             li {
                 font: {
-                    size: 1.1rem;
+                    size: 1.2rem;
                 }
             }
         }

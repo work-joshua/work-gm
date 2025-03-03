@@ -1,3 +1,5 @@
+/* @import "tailwindcss"; */
+
 
 html,
 body {
@@ -36,4 +38,11 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+/* Useful */
+.clear_fix {
+  content: '';
+  display: table;
+  clear: both;
 }

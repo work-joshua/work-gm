@@ -1,0 +1,22 @@
+
+
+.works_body {
+    width: calc(100% - (var(--default_padding) * 2));
+    height: auto;
+    margin: calc(var(--default_padding) *2)  auto;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+
+    .works_body {
+        width: calc(100% - (var(--default_padding_mobile) * 2));
+    }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 900px) {
+
+
+}

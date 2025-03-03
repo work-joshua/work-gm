@@ -38,6 +38,7 @@ $button-margin: 10px;
             size: 1.1rem;
         }
 
+        &.menu_active,
         &:hover {
             text-decoration: underline;
             text-underline-offset: 10px;
@@ -71,6 +72,7 @@ $button-margin: 10px;
     height: 0;
     transition: height 0.3s ease;
     z-index: 101;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -111,6 +113,10 @@ button.header_menu_close_mobile {
             size: 1.5rem;
             weight: 500;
         }
+
+        &.menu_mobile_active {
+            opacity: 0.5;
+        }
     }
 
     &.visible {
@@ -122,6 +128,10 @@ button.header_menu_close_mobile {
 /* Mobile */
 @media screen and (max-width: 700px) {
 
+
+    .header_menu_mobile {
+        display: inherit;
+    }
 
     .collection_house {
         width: 100%;
@@ -166,7 +176,7 @@ button.header_menu_close_mobile {
         width: 20%;
     }
     .header_two {
-        width: 60%;    
+        width: 60%;
         button {
             font: {
                 size: 1rem;
