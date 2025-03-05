@@ -1,0 +1,54 @@
+
+.home_gallery {
+    width: 100%;
+    height: calc(100vh - var(--default_header_height));
+}
+.photos {
+    width: 100%;
+    height: calc(100vh - var(--default_header_height) - var(--std_margin));
+    position: relative;
+    overflow: hidden;
+
+    &.fade {
+        > img {
+            opacity: 0;
+        }
+        // opacity: 0;
+    }
+
+    > img {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+.actions {
+    width: 100%;
+    height: var(--std_margin);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    > p {
+        font: {
+            size: 1.2rem;
+            weight: 500;
+        }
+    }
+
+    > button {
+        width: 50px;
+        height: 50px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color_light);
+
+        &:hover {
+            color: var(--color_dark);
+        }
+    }
+}
+

@@ -55,13 +55,13 @@ export const Menu = ({  }) => {
                 </div>
                 <div className={styles.header_two}>
                     <a href="/works" title="Projects we have worked on">
-                        <button className={`${thisPage=='works' ? styles.menu_active : ''}`}>Works</button>
+                        <button className={`${thisPage=='works' ? styles.menu_active : ''}`}>WORKS</button>
                     </a>
                     <a href="#" title="About GM">
-                        <button className={`${thisPage=='about' ? styles.menu_active : ''}`}>About</button>
+                        <button className={`${thisPage=='about' ? styles.menu_active : ''}`}>ABOUT</button>
                     </a>
                     <a href="#" title="Schedule a session">
-                        <button className={`${thisPage=='booking' ? styles.menu_active : ''}`}>Booking</button>
+                        <button className={`${thisPage=='booking' ? styles.menu_active : ''}`}>BOOKING</button>
                     </a>
                 </div>
                 <div className={styles.header_three}>
@@ -72,6 +72,9 @@ export const Menu = ({  }) => {
                         <button className={styles.mobile} onClick={toggleMenu}>{ icons.menu }</button>
                     </a>
                 </div>
+            </div>
+            <div className={styles.header_under}>
+
             </div>
             {
                 // isOpen &&

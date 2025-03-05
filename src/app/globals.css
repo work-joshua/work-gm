@@ -17,10 +17,11 @@ body {
 
 :root {
   /* Dimensions */
-  --default_padding: 50px;
+  --default_padding: 20px;
   --std_margin: 50px;
   --text_margin: 10px;
   --default_padding_mobile: 10px;
+  --default_header_height: 70px;
 
   /* Colors */
   --color_dark: #202020;

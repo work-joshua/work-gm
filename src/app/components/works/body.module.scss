@@ -3,9 +3,8 @@
 .studioworks_grid {
     // background-color: red;
     display: grid;
-    grid-template-columns: auto auto auto;
-    // gap: var(--default_padding) var(--default_padding);
-    gap: 20px 20px;
+    grid-template-columns: auto auto auto auto;
+    gap: var(--default_padding) var(--default_padding);
 }
 .studioworks_anchor {
     display: block;
@@ -13,7 +12,7 @@
 
 .studioworks_canvas {
     height: 0x;
-    padding-bottom: 100%;
+    padding-bottom: 120%;
     position: relative;
 }
 
