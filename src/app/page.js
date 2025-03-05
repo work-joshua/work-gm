@@ -7,7 +7,6 @@ export default function Page() {
   return (
     <div className={styles.page}>
       <Home />
-      {/* <Body /> */}
     </div>
   );
 }

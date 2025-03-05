@@ -61,12 +61,12 @@ $button-margin: 10px;
         height: 40px;
         border: none;
         cursor: pointer;
-        margin-left: 10px;
+        margin-left: 15px;
         background-color: transparent;
 
         > svg {
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
         }
 
         &.mobile {
@@ -113,6 +113,7 @@ button.header_menu_close_mobile {
     margin: 0 auto;
     margin-top: 100px;
     opacity: 0;
+    display: none;
     transition: opacity 0.3s ease;
 
     p {
@@ -127,6 +128,7 @@ button.header_menu_close_mobile {
     }
 
     &.visible {
+        display: inherit;
         opacity: 1;
     }
 }
@@ -137,7 +139,9 @@ button.header_menu_close_mobile {
 
 
     .header_menu_mobile {
-        display: inherit;
+        // &.slideDown {
+            display: inherit;
+        // }
     }
 
     .collection_house {

@@ -78,7 +78,7 @@ export const Menu = ({  }) => {
             </div>
             {
                 // isOpen &&
-                <div className={`${styles.header_menu_mobile} ${isOpen ? styles.slideDown : ''}`}>
+                <div className={`${styles.header_menu_mobile} ${isOpen ? styles.slideDown : styles.slideUp}`}>
                     <button onClick={toggleMenu} className={`${styles.header_menu_close_mobile} ${isOpen ? styles.visible : ''}`}>
                         {
                             icons.close
